@@ -1,4 +1,5 @@
 ---------	EDSADC   -------------------------------
+EDSADC adding in repository
 – Input voltage range 0…5 V
 – Common mode voltage: VAREF / 2, optional
 – Common mode hold voltage: VDDM / 2, selectable for each pin
