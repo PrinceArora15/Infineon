@@ -1,0 +1,38 @@
+---------	EDSADC   -------------------------------
+– Input voltage range 0…5 V
+– Common mode voltage: VAREF / 2, optional
+– Common mode hold voltage: VDDM / 2, selectable for each pin
+– Programmable gain (1/2/4/8/16
+- On-chip modulator, single-bit second-order feed-forward modulator, typ. sample frequency 26.67 MHz
+
+• Demodulator (concatenated hardware filter stages)
+– Configurable CIC filter with decimation rates of 4…512
+– FIR filter with 8 coefficients (10-bit) with decimation rate 2 (FIR0)
+– FIR filter with 28 coefficients (10-bit) with decimation rate 1 or 2 (FIR1)
+– Pass Band 10 …100 kHz, output sampling rate fd = 30 … 300 kHz (decim. rate FIR1 = 2:1),
+- Pass Band 4 …10 kHz, output sampling rate fd = 24 … 60 kHz (decim. rate FIR1 = 1:1),
+
+Feature TC39x TC38x TC37x TC36x TC35x TC33x
+Channels 14 	10 	6   4
+
+
+
+- Main feature - 
+1. On Chip Modulator
+2. Configurable Filter Chain - filter chain configuration determines the attenuation and delay properties of the filter.
+3. Demodulator - The CIC filter provides the basic filtering and decimation with a selectable decimation rate.
+	       - Two FIR filters, each with a decimation rate of 2 (also 1 for FIR1), allow effective signal shaping by attenuating the
+		upper frequencies of the signal spectrum.
+	       - The high-pass filter provides offset compensation by removing the DC component of the input signal.
+
+4. Decimator
+5. Filter
+
+Registers - 
+- System Reg
+	- Clock Control Reg : DISR, DISS, EDIS (bit range)
+	- OCS - For Suspend in debug
+	- Access -- ??
+	- KRST - Kernel reset , Kernel status --?
+
+Quantization Noise - Delta square/12
